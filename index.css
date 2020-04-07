@@ -1,0 +1,165 @@
+html {
+    background: url(https://static.vecteezy.com/system/resources/previews/000/691/498/original/rock-paper-scissors-pop-art-vector-design.jpg) bottom center;
+    background-size: cover;
+    font-size: 10px;
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+.mainContainer {
+    min-height: 100%;
+    width: 100%;
+    position: fixed;
+    
+
+    display: grid;
+    grid-template-columns: 35vw auto 35vw;
+    grid-template-rows: 30% auto 30%;
+    grid-template-areas: 
+        "top top top"
+        ". bottomMiddle ."
+        "sFooter mFooter eFooter";
+    
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border: .1rem solid rgb(212, 205, 205);
+    border-radius: 50%;
+    margin: 15rem;
+    font-size: 3.5rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 6rem;
+    height: 5rem;
+    text-align: center;
+    color: rgb(83, 82, 82);
+    background: white;
+    text-shadow: 0 0 .1rem black;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    border-color: black;
+    box-shadow: 0 0 1rem black;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border: .1rem solid rgb(212, 205, 205);
+    border-radius: 50%;
+    margin: 15rem;
+    font-size: 3.5rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 6rem;
+    height: 5rem;
+    text-align: center;
+    color: rgb(83, 82, 82);
+    background: white;
+    text-shadow: 0 0 .1rem black;
+}
+
+
+
+#playerScore {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    justify-self: center;
+    align-self: center;
+}
+
+#computerScore {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    justify-self: center;
+    align-self: center;
+}
+
+.startGame{
+    border: .1rem solid rgb(212, 205, 205);
+    border-radius: 10px;
+    margin: 1rem;
+    font-size: 2.2rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 15rem;
+    height: 2.5rem;
+    text-align: center;
+    color: rgb(83, 82, 82);
+    background: white;
+    text-shadow: 0 0 .1rem black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 18%;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    justify-self: center;
+    align-self: center;
+}
+
+.startGame:hover {
+    transform: scale(1.1);
+    border-color: black;
+    box-shadow: 0 0 1rem black;
+}
+
+.gameMessage {
+    border: 1px solid #969696;
+    background-color: white;
+    border-radius: 10px;
+    height: 3rem;
+    width: 98vw;
+    padding: 5px 8px 0 16px;
+    padding-left: 14px;
+
+    font-size: 2.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    
+
+    grid-area: 3 / 1 / 4 / 4;
+    justify-self: center;
+    align-self: end;
+}
+
+
+#rockButton {
+    grid-area: sFooter;
+    justify-self: center;
+    align-self: center;
+}
+
+#paperButton {
+    grid-area: mFooter;
+    justify-self: center;
+    align-self: center;
+}
+
+#scissorsButton {
+    grid-area: eFooter;
+    justify-self: center;
+    align-self: center;
+}
+
